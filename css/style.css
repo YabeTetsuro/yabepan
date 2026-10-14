@@ -1,0 +1,237 @@
+/* リセット & 基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #4a3b32; /* 温かみのあるブラウン */
+  background-color: #fdfbf7;
+  line-height: 1.6;
+}
+
+/* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Kiwi Maru', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #8c531b;
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4a3b32;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* スマホ用ハンバーガー */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #4a3b32;
+  transition: 0.3s;
+}
+
+/* メインビジュアル */
+.hero {
+  margin-top: 60px;
+  height: 350px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #d4a373;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-family: 'Kiwi Maru', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* セクション共通 */
+.section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Kiwi Maru', serif;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #8c531b;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.bg-light {
+  background-color: #f4ece1;
+}
+
+.about-desc {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* メニューカード */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.menu-img-placeholder {
+  width: 100%;
+  height: 140px;
+  background-color: #e6ccb2;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f5539;
+  margin-bottom: 10px;
+}
+
+.menu-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.menu-card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* 店舗情報テーブル */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th, .info-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.info-table th {
+  width: 30%;
+  background-color: #f0e6d2;
+}
+
+/* フッター */
+.footer {
+  background-color: #7f5539;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+}
+
+/* トップへ戻るボタン */
+.totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8c531b;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.totop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* モバイル表示時のスタイル調整 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+
+  .nav.is-active {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .info-table th, .info-table td {
+    display: block;
+    width: 100%;
+  }
+}
