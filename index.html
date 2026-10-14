@@ -24,6 +24,19 @@
     @media (max-width: 600px) {
       .map-container { height: 220px; }
     }
+
+    /* メニュー画像のプレースホルダー用スタイル */
+    .menu-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      background: #fff7ed;
+    }
+    @media (max-width: 600px) {
+      .menu-img { height: 120px; }
+    }
   </style>
 </head>
 <body>
@@ -74,22 +87,22 @@
       <h2 class="section-title">おすすめパン</h2>
       <div class="menu-grid">
         <div class="menu-card">
-          <div class="menu-img-placeholder">パン写真</div>
+          <img src="images/bread.svg" alt="パンのイラスト" class="menu-img">
           <h3>ぶたパン</h3>
           <p>見た目もかわいい肉まん風の具材が入った名物惣菜パン。</p>
         </div>
         <div class="menu-card">
-          <div class="menu-img-placeholder">パン写真</div>
+          <img src="images/bread.svg" alt="パンのイラスト" class="menu-img">
           <h3>トライアングル</h3>
           <p>クリームチーズを挟み、表面を甘くコーティングした優しい味わい。</p>
         </div>
         <div class="menu-card">
-          <div class="menu-img-placeholder">パン写真</div>
+          <img src="images/bread.svg" alt="パンのイラスト" class="menu-img">
           <h3>ポテトパン</h3>
           <p>ハッシュドポテトにチーズとマヨネーズが絶妙にマッチ！</p>
         </div>
         <div class="menu-card">
-          <div class="menu-img-placeholder">パン写真</div>
+          <img src="images/bread.svg" alt="パンのイラスト" class="menu-img">
           <h3>生クリームあんぱん</h3>
           <p>冬季限定など季節ごとに登場する楽しみな一品。</p>
         </div>
@@ -132,7 +145,7 @@
         <div class="map-container" aria-label="地図: 矢部パン 関屋店">
           <iframe
             title="矢部パン 関屋店の地図"
-            src="https://www.google.com/maps?q=%E3%80%92951-8127+%E6%96%B0%E6%BD%9F%E7%9C%8C%E6%96%B0%E6%BD%9F%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%96%A2%E5%B1%8B%E4%B8%8B%E5%B7%9D%E5%8E%9F%E7%94%BA2-12-2&hl=ja&z=17&output=embed"
+            src="https://www.google.com/maps?q=%E3%80%92951-8127+%E6%96%B0%E6%BD%9F%E7%9C%8C%E6%96%B0%E6%BD%9F%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%96%A2%E5%B1%8B%E4%B8%8B%E5%B7%9D%E5%8E%9F%E7%94%BA[...]"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
